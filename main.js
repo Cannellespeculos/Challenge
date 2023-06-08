@@ -112,4 +112,93 @@ function sumEven() {
   console.log(total)
 }
 
-sumEven()
+// eight challenge
+// Create a function that will convert from Celsius to Fahrenheit
+function Fahrenheit(C) {
+  let fahrenheit = C * 1.8 + 32
+
+  return fahrenheit
+
+}
+
+// console.log(Fahrenheit(18))
+
+
+// challenge nine
+// Create a function that will convert from Fahrenheit to Celsius
+function Celsius(F) {
+  let celsius = (F - 32) / 1.8;
+
+  return celsius
+}
+
+// console.log(Celsius(101.3))
+
+
+// challenge 10
+// Calculate the sum of numbers in an array of numbers
+function sumArray(array) {
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total += array[i]
+
+  }
+
+  return total
+}
+
+// console.log(sumArray([56, 54]))
+
+
+// challenge ten
+// Calculate the average of the numbers in an array of numbers
+function averageArray(array) {
+  let total = 0;
+  for (let i = 0; i < array.length; i++) {
+    total += array[i]
+
+  }
+
+  total /= array.length
+
+  return total
+}
+
+// console.log(averageArray([18, 15]))
+
+
+// challenge eleven 
+// Create a function that receives an array of numbers as argument and returns an
+// array containing only the positive numbers
+function positive(array) {
+  let positif = []
+  for (let index = 0; index < array.length; index++) {
+    if (array[index] > 0) {
+      positif.push(array[index])
+    }
+
+  }
+
+  return positif
+}
+
+// console.log(positive([12, -36, 36, -52]))
+
+
+// challenge twelve
+// Find the maximum number in an array of numbers
+export function maxNum(array) {
+  let max = 0
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] > max) {
+      max = array[i]
+    }
+
+  }
+
+  return max
+
+}
+
+// console.log(maxNum([15, 69, 35, 45, 12, 65, 75, 98]))
+
