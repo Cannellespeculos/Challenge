@@ -202,3 +202,30 @@ export function maxNum(array) {
 
 // console.log(maxNum([15, 69, 35, 45, 12, 65, 75, 98]))
 
+
+// challenge thirdteen 
+// Print the first 10 Fibonacci numbers without recursion
+export function Fibonacci() {
+  let lastNumber = 0;
+
+  for (let i = 1; i <= 10; i++) {
+    console.log(i + lastNumber)
+    lastNumber = i + lastNumber
+  }
+
+}
+
+// Fibonacci()
+
+
+// challenge sixteen
+// Create a function that will return a Boolean specifying if a number is prime
+function prime(n) {
+  if (n % 2 != 0) {
+    return true
+  } else if (n % 2 === 0) {
+    return false
+  }
+}
+
+console.log(prime(27))
