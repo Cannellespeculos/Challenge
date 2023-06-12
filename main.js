@@ -255,8 +255,64 @@ function sumDigits(num) {
   return total
 }
 
-console.log(sumDigits(86))
+// console.log(sumDigits(86))
 
 
 // let bruh = parseInt("33")
 // console.log(bruh)
+
+
+// challenge eighteen
+// Print the first 100 prime numbers
+
+export function premier() {
+  const prem = [1, 2, 3, 5];
+  let index = 1;
+  let counter = prem.length;
+  let trueorfalse = false;
+
+  while (counter < 100) {
+    for (let i = 0; i < prem.length; i++) {
+      if (index % prem[i] != 0) {
+        prem.push(index)
+      } else {
+        index++;
+        i = 0;
+      }
+
+    }
+    counter++;
+    index++;
+  }
+
+
+  return prem
+
+
+}
+
+// console.log(premier())
+
+
+
+// challenge nineteen
+// Create a function that will return in an array the first “p” prime numbers
+// greater than “n”
+
+function greaterPrime(n) {
+  let p = 0
+
+  for (let i = n; p === 0; i++) {
+    if (i != n) {
+      if (i % 2 != 0) {
+        p += i
+
+      }
+    }
+  }
+  return p
+}
+
+// console.log(greaterPrime(89))
+
+
