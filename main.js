@@ -97,6 +97,16 @@ function sum() {
 
 // sixth challenge
 // Calculate 10!
+function idk() {
+  let total = 1
+  for (let i = 2; i <= 10; i++) {
+    total *= i
+
+  }
+  return total
+}
+
+// console.log(idk())
 
 
 // seventh challenge
@@ -228,4 +238,25 @@ function prime(n) {
   }
 }
 
-console.log(prime(27))
+// console.log(prime(27))
+
+
+// challenge seventeen
+// Calculate the sum of digits of a positive integer number
+function sumDigits(num) {
+  let numString = num.toString()
+  let total = 0;
+  for (let i = 0; i < numString.length; i++) {
+    let firstDigit = numString[i]
+    total += parseInt(firstDigit)
+
+  }
+
+  return total
+}
+
+console.log(sumDigits(86))
+
+
+// let bruh = parseInt("33")
+// console.log(bruh)
