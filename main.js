@@ -316,3 +316,83 @@ function greaterPrime(n) {
 // console.log(greaterPrime(89))
 
 
+// challenge twenty-two
+// Reverse an array
+function reverseArray(array) {
+  let voidArray = [];
+  for (let i = 1; i < array.length; i++) {
+    voidArray.push(array[array.length - i])
+
+  }
+
+  return voidArray
+}
+
+// console.log(reverseArray([556, 48, 98, 23, 45, 456]))
+
+
+// challenge twenty-three
+// reverse a string
+function reverseString(string) {
+  let voidString = ""
+  for (let i = 1; i < string.length + 1; i++) {
+    voidString += string[string.length - i]
+
+  }
+
+
+  return voidString
+}
+
+// console.log(reverseString("cannelle"))
+
+
+// challenge twenty-four
+//  Create a function that will merge two arrays and return the result as a new
+// array
+
+function mergeArray(firstArr, secondArr) {
+  const bigArray = firstArr;
+  for (let i = 0; i < secondArr.length; i++) {
+    bigArray.push(secondArr[i])
+
+  }
+
+  return bigArray
+}
+
+// console.log(mergeArray([5, 6, 8], [9, 56, 23]))
+
+
+// challenge twenty-five
+// Create a function that will receive two arrays of numbers as arguments and
+// return an array composed of all the numbers that are either in the first array
+// or second array but not in both
+
+function JustOne(firstArr, secondArr) {
+  let bigArray = firstArr;
+  for (let i = 0; i < secondArr.length; i++) {
+    if (!bigArray.includes(secondArr[i])) {
+      bigArray.push(secondArr[i])
+    }
+
+  }
+
+  return bigArray
+}
+
+// console.log(JustOne([5, 6, 9], [2, 5, 3]))
+
+
+// challenge twenty-six
+// Create a function that will receive two arrays and will return an array with
+// elements that are in the first array but not in the second
+
+function name(params) {
+
+}
+
+
+// challenge twenty-seven
+// Create a function that will receive an array of numbers as argument and will return a
+// new array with distinct elements
