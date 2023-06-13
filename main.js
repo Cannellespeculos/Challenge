@@ -388,11 +388,59 @@ function JustOne(firstArr, secondArr) {
 // Create a function that will receive two arrays and will return an array with
 // elements that are in the first array but not in the second
 
-function name(params) {
+// function name(params) {
 
-}
+// }
 
 
 // challenge twenty-seven
 // Create a function that will receive an array of numbers as argument and will return a
 // new array with distinct elements
+
+
+
+
+
+// bonus
+// tri a bulle
+
+function triBulle() {
+  let array = [454, 78, 69, 568, 5464526]
+  let changed;
+
+  do {
+    changed = false
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > array[i + 1]) {
+        let tmp = array[i]
+        array[i] = array[i + 1]
+        array[i + 1] = tmp
+        changed = true
+      }
+
+    }
+  } while (changed)
+
+
+  return array
+}
+
+// console.log(triBulle())
+
+
+// challenge thirty-one
+// Create a function that will return the number of words in a text
+
+function numWords(tmp) {
+  let total = 1;
+  for (let i = 0; i < tmp.length; i++) {
+    if (tmp[i] === " ") {
+      total++;
+    }
+
+  }
+  return total
+}
+
+// console.log(numWords("yahhhh you like boyyyysss ! and i like girrrrrllllssss"))
+
