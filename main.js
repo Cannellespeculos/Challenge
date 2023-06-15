@@ -444,3 +444,41 @@ function numWords(tmp) {
 
 // console.log(numWords("yahhhh you like boyyyysss ! and i like girrrrrllllssss"))
 
+
+// challenge thirty-two
+//  Create a function that will capitalize the first letter of each word in a text 
+
+function CapWords() {
+  let tmp = "what does the fox said ?"
+  let total = "";
+  let cap;
+  for (let i = 0; i < tmp.length; i++) {
+    if (tmp[i - 1] === " " || i === 0) {
+      cap = tmp[i]
+      total += cap.toUpperCase();
+    } else {
+      total += tmp[i]
+    }
+
+  }
+  return total
+}
+
+// console.log(CapWords())
+
+function Caesar(Futurecode, décalage) {
+  let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  let code = ""
+  for (let i = 0; i < Futurecode.length; i++) {
+    for (let a = 0; a < alphabet.length; a++) {
+      if (Futurecode[i] === alphabet[a]) {
+        code += alphabet[a + décalage]
+      }
+
+    }
+
+  }
+  return code
+}
+
+console.log(Caesar("parapluie", 3))
