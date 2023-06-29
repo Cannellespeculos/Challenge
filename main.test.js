@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { maxNum } from "/main.js";
+import { Bulle } from "/main.js";
 
 describe("calculer", () => {
     it("addition", () => {
-        expect(maxNum([21, 25, 36, 86])).toBe(86)
+        expect(Bulle([21, 86, 97, 32, 14])).toBe([14, 21, 32, 86, 97])
 
     })
 })

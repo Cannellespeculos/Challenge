@@ -397,8 +397,18 @@ function JustOne(firstArr, secondArr) {
 // Create a function that will receive an array of numbers as argument and will return a
 // new array with distinct elements
 
+function notDouble(array) {
+  let voidArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (!voidArray.includes(array[i])) {
+      voidArray.push(array[i])
+    }
 
+  }
+  return voidArray
+}
 
+// console.log(notDouble([1, 1, 2, 5, 9, 6, 5]))
 
 
 // bonus
@@ -466,6 +476,30 @@ function CapWords() {
 
 // console.log(CapWords())
 
+
+// challenge thirty-four
+// Create a function that returns an array with words inside a text. 
+function WordsToArray(string) {
+  let words = ""
+  let voidArray = []
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] != " ") {
+      words += string[i]
+      if (i === string.length - 1) {
+        voidArray.push(words)
+      }
+    } else if (string[i] === " ") {
+      voidArray.push(words)
+      words = ""
+    }
+
+  }
+
+  return voidArray
+}
+
+// console.log(WordsToArray("what does the fox said"))
+
 function Caesar(Futurecode, décalage) {
   let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
   let code = ""
@@ -481,4 +515,167 @@ function Caesar(Futurecode, décalage) {
   return code
 }
 
-console.log(Caesar("parapluie", 3))
+// console.log(Caesar("Parapluie", 3))
+
+
+// challenge thirty-six 
+// Create a function that converts a string to an array of characters
+function CharToArray(string) {
+  const array = []
+  for (let i = 0; i < string.length; i++) {
+    array.push(string[i])
+
+  }
+  return array
+}
+
+// console.log(StringToArray("yahh"))
+
+
+// challenge fourty-six
+// Find the maximum number in a jagged array of numbers or array of numbers
+
+
+
+// challenge fourty-eight
+// Create a function to return the longest word in a string
+function longWord(string) {
+  let words = WordsToArray(string)
+  let longestWord = words[0]
+
+  for (let i = 0; i < words.length; i++) {
+    let element = words[i]
+    if (element.length > longestWord.length) {
+      longestWord = element
+    }
+
+
+  }
+  return longestWord
+}
+// console.log(longWord("yahhhhhhh boiiii"))
+
+
+// bonus 
+function DeuxiemePlusPetit(arr) {
+  let premier = arr[0]
+  let second = arr[1]
+  let actuel;
+  if (premier > second) {
+    premier = arr[1]
+    second = arr[0]
+  }
+
+  for (let i = 3; i < arr.length; i++) {
+    if (arr[i] < premier) {
+      actuel = second
+      second = premier
+      premier = arr[i]
+    } else if (arr[i] < second) {
+      second = arr[i]
+    }
+
+  }
+  return second
+}
+
+// console.log(DeuxiemePlusPetit([2, 9, 6]))
+
+
+// bonus 
+function not(array) {
+  let trying;
+  let result = []
+
+  for (let i = 0; i < array.length; i++) {
+    trying = array.pop(i)
+    if (!array.includes(trying)) {
+      result.push(array[i])
+    }
+
+  }
+  return result
+}
+
+// console.log(not([1, 2, 3, 1, 3]))
+
+
+// bonus
+// tri par insertion
+export function Bulle(arr) {
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[j + 1] < arr[j]) {
+        let tmp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = tmp
+      }
+
+    }
+
+  }
+
+  return arr
+}
+
+console.log(Bulle([159, 68, 789, 536, 425]))
+
+function isPalindrome(x) {
+  let palindrome = "";
+  for (let i = 0; i < x.length; i++) {
+    palindrome += x[i]
+  }
+
+  if (palindrome === x) {
+    return true
+  } else {
+    return false
+  }
+}
+
+// console.log(isPalindrome("hello"))
+
+function findShort(s) {
+  let words = s.split(" ");
+  let shortword = words[0]
+
+  for (let i = 0; i < words.length; i++) {
+    if (words[i].length < shortword.length) {
+      shortword = words[i]
+    }
+  }
+  return shortword.length
+}
+
+console.log(findShort("yeahhhh boi"))
+
+// test .splice()
+
+function Splice(yourmom) {
+  yourmom.splice(0, 4)
+  return yourmom
+}
+
+console.log(Splice(["your", "mom", "ha", "ha", "ha"]))
+
+
+// test class
+
+class Rectangle {
+  constructor(width, height) {
+    this.name = "Rectangle";
+    this.height = height;
+    this.width = width;
+  }
+
+
+}
+
+console.log(new Rectangle(21, 35).width)
+
+// bonus
+
+function tablTableau(array) {
+
+}
